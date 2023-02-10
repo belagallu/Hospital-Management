@@ -1,0 +1,82 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+
+<head>
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/hos.jpg" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .jumbotron h5,
+    h3 {
+      text-align: center;
+    }
+
+
+    .alert {
+      margin: 0px;
+    }
+
+
+
+    .glow {
+      font-size: 50px;
+      color: rgb(36, 18, 4);
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #eeeeee, 0 0 20px #e4b5d6, 0 0 30px #eca7e7, 0 0 40px #cfacc4, 0 0 50px #e9b7da, 0 0 60px #a3cedb, 0 0 70px #b4e7e5;
+      }
+
+      to {
+        text-shadow: 0 0 20px #eeeeee, 0 0 30px #9debf5, 0 0 40px #8fd9f0, 0 0 50px #9ad3dd, 0 0 60px #a8d6e4, 0 0 70px #a2d9db, 0 0 80px #94d7da;
+      }
+    }
+  </style>
+</head>
+<br>
+<br>
+
+<div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+  <h1 class="display-3 glow"><b>&nbsp;&nbsp;Life Hospital&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></h1>
+  <br><br><br><br><br>
+  <p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  <h3>Emergency ?</h3>
+
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/patientclick" role="button">Take Appointment</a>
+  </p>
+  <br><br>
+</div>
+
+<br><br><br><br>
+
+{% include "hospital/admin_doctor_patient_card.html" %}
+<br><br><br>
+
+
+{% endblock content %}
